@@ -1,32 +1,31 @@
-import React, { useState } from "react";
-import NavBar from "../components/NavBar";
+import React, { useState } from 'react'
 
-function TodoList() {
+function TodoList({ isDarkMode }) {
   /**const [inputValue, setInputValue] = useState('');: Declares the state variable inputValue and its corresponding setter function setInputValue using the useState hook. The initial value of inputValue is set to an empty string ''. */
 
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('')
   //const [todos, setTodos] = useState([]);: Declares the state variable todos and its corresponding setter function setTodos using the useState hook. The initial value of todos is an empty array [].
 
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([])
 
   //handleInputChange: Updates the inputValue state with the value entered in the input field.
   const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
+    setInputValue(event.target.value)
+  }
   /*handleAddTodo: Adds a new todo to the todos state array by appending the trimmed inputValue to the existing todos. It then resets the inputValue to an empty string.
    */
   const handleAddTodo = () => {
-    if (inputValue.trim() !== "") {
-      setTodos([...todos, inputValue.trim()]);
-      setInputValue("");
+    if (inputValue.trim() !== '') {
+      setTodos([...todos, inputValue.trim()])
+      setInputValue('')
     }
-  };
+  }
   /* handleDeleteTodo: Removes a todo from the todos state array based on the provided todoIndex. It filters out the todo at the specified index, creating a new array of todos without the deleted todo.
    */
   const handleDeleteTodo = (todoIndex) => {
-    const updatedTodos = todos.filter((todo, index) => index !== todoIndex);
-    setTodos(updatedTodos);
-  };
+    const updatedTodos = todos.filter((todo, index) => index !== todoIndex)
+    setTodos(updatedTodos)
+  }
 
   /**
    * The return statement contains the JSX code that represents the component's UI.
@@ -38,8 +37,7 @@ The list of todos is rendered as an unordered list (<ul>) using the todos.map() 
 The key prop is set to the index of each todo item to provide a unique identifier for React to efficiently render and update the list. */
 
   return (
-    <div>
-      <NavBar />
+    <div className={isDarkMode ? 'clr-white' : 'clr-black'}>
       <h1>To-Do List</h1>
       <input type="text" value={inputValue} onChange={handleInputChange} />
       <br />
@@ -55,7 +53,7 @@ The key prop is set to the index of each todo item to provide a unique identifie
         ))}
       </ul>
     </div>
-  );
+  )
 }
 
-export default TodoList;
+export default TodoList

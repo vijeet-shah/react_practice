@@ -1,28 +1,23 @@
-import React, { useState } from "react";
-import NavBar from '../components/NavBar';
+import React, { useState } from 'react'
 
-
-function Darkmode() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
+function Darkmode({ isDarkMode, setIsDarkMode }) {
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+    setIsDarkMode((prev) => !prev)
+  }
 
   return (
-    <div className={isDarkMode ? "dark-mode" : ""}>
-    <NavBar/>
+    <div className={isDarkMode ? 'clr-white' : 'clr-black'}>
       <h1>My App</h1>
       <button onClick={toggleDarkMode}>
-        {isDarkMode ? "Turn Off" : "Turn On"} Dark Mode
+        {isDarkMode ? 'Turn Off' : 'Turn On'} Dark Mode
       </button>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in
-        sapien at tortor imperdiet hendrerit. Sed vitae turpis vel erat
-        suscipit scelerisque.
+        sapien at tortor imperdiet hendrerit. Sed vitae turpis vel erat suscipit
+        scelerisque.
       </p>
     </div>
-  );
+  )
 }
 
 export default Darkmode

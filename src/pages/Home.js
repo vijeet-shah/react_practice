@@ -1,13 +1,10 @@
-import React from 'react';
-import NavBar from '../components/NavBar';
+import React from 'react'
 
-
-function Home() {
+function Home({ isDarkMode }) {
   return (
-    <>    
-    <NavBar/>
-    <h2>I am practicing various use of react js on this App</h2>
-    </>
+    <div className={isDarkMode ? 'clr-white' : 'clr-black'}>
+      <h2>I am practicing various use of react js on this App</h2>
+    </div>
   )
 }
 

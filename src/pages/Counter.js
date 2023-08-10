@@ -1,9 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import NavBar from '../components/NavBar';
 
 
-function Counter() {
+function Counter({ isDarkMode }) {
     // Initialize a state variable called 'count' with an initial value of 0
     const [count, setCount] = useState(0);
   // Event handler for incrementing the count
@@ -15,8 +14,7 @@ function Counter() {
     setCount(count - 1);
   }
   return (
-    <div>
-    <NavBar/>
+    <div className={isDarkMode ? 'clr-white' : 'clr-black'}>
       <p>Count: {count}</p>
       <button onClick={handleIncrement}>Increment</button>
       <button onClick={handleDecrement}>Decrement</button>

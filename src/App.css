@@ -1,15 +1,53 @@
+.bg-green {
+  background-color: #96e782;
+}
+.dark-bg-green {
+  background-color: #205f11;
+}
 
+.bg-body {
+  background-color: #f8fafc;
+}
+.dark-bg-body {
+  background-color: #0f172a;
+}
 
-.w1{
+.bg-red {
+  background-color: hwb(0 9% 14%);
+}
+.dark-bg-red {
+  background-color: hwb(0 0% 55%);
+}
+
+.bg-btn {
+  background-color: #f8fafc;
+}
+.dark-bg-btn {
+  background-color: hwb(0 75% 25%);
+}
+
+.nav-clr-black {
+  color: #0f172a;
+}
+.nav-clr-white {
+  color: #f8fafc;
+}
+
+.clr-black {
+  color: #0f172a;
+}
+.clr-white {
+  color: #f8fafc;
+}
+
+.w1 {
   text-align: center;
-  background-color: #96e782;  
   padding: 10px;
   margin: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
-  background-color: #96e782;
   height: 60px;
   width: 100%;
   display: flex;
@@ -19,36 +57,31 @@
   margin: 3px;
 }
 
-main-nav{
+main-nav {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-
-
 .main-nav li {
   display: inline;
   padding: 10px;
   margin: 10px;
-  background-color: rgb(255, 255, 238);
 }
 
 .main-nava li {
   display: inline;
   padding: 10px;
   margin: 10px;
-  background-color: hwb(60 83% 8%);
 }
 
-main-nava{
+main-nava {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 .navbara {
-  background-color: hwb(0 9% 14%);
   height: 60px;
   width: 100%;
   display: flex;

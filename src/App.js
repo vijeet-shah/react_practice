@@ -12,6 +12,12 @@ import FormHandle from "./pages/FormHandle";
 import ListKey from "./pages/ListKey";
 import More from "./pages/More";
 import Props from "./pages/propsProject/Props";
+import PassGen from "./pages/passwordgenrator/PassGen";
+import ContextDarkMode from "./pages/darkmode/ContextDarkMode";
+import Filter from "./pages/filter/Filter";
+import Search from "./pages/search/search";
+import DataScroll from "./pages/scroll/DataScroll";
+import Pagination from "./pages/pagination/Pagination";
 
 function App() {
   return (
@@ -30,6 +36,12 @@ function App() {
             <Route path="/listkey" element={<ListKey />} />
             <Route path="/more" element={<More />} />
             <Route path="/props" element={<Props />} />
+            <Route path="/pass" element={<PassGen />} />
+            <Route path="/contextdarkmode" element={<ContextDarkMode />} />
+            <Route path="/filter" element={<Filter />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/scroll" element={<DataScroll />} />
+            <Route path="/pagination" element={<Pagination />} />
           </Routes>
         </div>
       </Router>

@@ -1,0 +1,73 @@
+/* PassGen Container */
+.container {
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Container */
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Password Input */
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Copy Button */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Copy Button Hover Effect */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Range Input */
+input[type="range"] {
+  width: 100%;
+}
+
+/* Length Label */
+span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Checkbox Labels */
+input[type="checkbox"] {
+  margin-right: 5px;
+  transform: translateY(2px);
+}
+
+/* Additional Styling for Checkbox Labels (Optional) */
+input[type="checkbox"] + label {
+  font-weight: normal;
+}
+
+/* Media Query for Responsiveness (adjust as needed) */
+@media (max-width: 600px) {
+  .container {
+    max-width: 90%;
+  }
+}
